@@ -22,3 +22,28 @@ img{
     translate: -50% -50%;
     z-index: -1;
 }
+
+#legends{
+    color: white;
+}
+
+#loading{
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    display: grid;
+    align-content: center;
+    color: white;
+    font-size: 2rem;
+}
+
+#loading-frame{
+    border-top: 2px solid #ffff;
+    border-bottom: 2px solid #ffff;
+    padding: 1rem 2rem;
+}

@@ -1,4 +1,5 @@
 const url = "https://raddythebrand.github.io/apex-legends/data.json"
+const loader = document.getElementById('loading')
 
 async function getLegends(){
     try {
