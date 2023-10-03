@@ -1,6 +1,6 @@
-const url = "https://raddythebrand.github.io/apex-legends/data.json"
+const url = "https://raddythebrand.github.io/apex-legends/data.json";
 const loader = document.getElementById('loading');
-const loaderFrame = document.getElementById('loading-frame');
+const loadingFrame = document.getElementById('loading-frame');
 
 const ul = document.getElementById('legends');
 const list = document.createDocumentFragment();
@@ -12,18 +12,27 @@ async function getLegends(){
         console.log(data);
 
         if (response){
-            loader.style.display = "none";
+            loader.style.display = 'none';
         }
+        listLegends(data);
 
     } catch (error) {
         console.log(error);
-        loaderFrame.innerHTML = "Error"
+        loadingFrame.innerHTML = "Error"
     }
 }
 
 
-function listLegends(){
-    
+function listLegends(data){
+    data.map(function(legend){
+
+        const legendText = "Legend";
+        const item = document.createElement('li');
+        item.innerHTML = legendText;
+        list.appendChild(item);
+    });
+    ul.appendChild(list);
+
 }
 
 getLegends();
