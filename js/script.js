@@ -18,7 +18,7 @@ async function getLegends(){
 
     } catch (error) {
         console.log(error);
-        loadingFrame.innerHTML = "Error"
+        loader.innerHTML = 'Error';
     }
 }
 
@@ -26,7 +26,9 @@ async function getLegends(){
 function listLegends(data){
     data.map(function(legend){
 
-        const legendText = "Legend";
+        const legendText = `
+            <div class="legend-nickname">
+        `;
         const item = document.createElement('li');
         item.innerHTML = legendText;
         list.appendChild(item);
